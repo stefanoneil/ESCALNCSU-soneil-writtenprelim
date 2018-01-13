@@ -1,4 +1,5 @@
-	
+[This is the start I have on a draft, mostly of introductory material.]
+
 In keeping with the Von Neumann model of computer architecture, computer systems have traditionally separated computation, performed by a dedicated processor, from data storage, typically accomplished by a hard disk drive (HDD), or more recently, a solid state drive (SSD). Over the past few decades, processor performance has improved dramatically. Storage access latency has not enjoyed similar improvement.
 
 The result of this mismatch is that storage access has become the most significant limiting factor for computing performance. This is particularly true for data intensive applications, which have become ever more prevalent with the advent of big data.
