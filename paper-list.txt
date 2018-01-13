@@ -1,4 +1,6 @@
-For now this is more or less a straight dump of all the papers under consideration.
+For now this is more or less a straight dump of all the papers currently under consideration. I have not yet made the formatting uniform for all of these, and will probably wait to do so until we have discussed preferred citation format. More papers belong in the "uncertain relevance" category than the single paper currently listed there. There are a few other papers not yet on this list that I have not even skimmed enough to reasonably include here yet. I would also like to annotate each entry with a brief description of the paper's relevance and my thoughts on its inclusion. I am hoping to complete all this by Wednesday (Jan 17, 2018).
+
+There are currently 23 papers listed here. Some of these are likely to be excluded from the eventual final draft.
 
 
 G. Koo, K. K. Matam, T. I, H. V. Krishna Giri Narra, J. Li, H.-W. Tseng, “Summarizer: Trading Communication with Computing Near Storage,” in Proceedings of the 50th Annual IEEE/ACM International Symposium on Microarchitecture, MICRO-50 ’17, (Cambridge, MA, USA), pp. 219–231, ACM, 2017.
@@ -34,7 +36,7 @@ B. M. Ren, J. S. Foster, “Just-in-Time Static Type Checking for Dynamic Langua
 
 
 
-Cited in original proposal:
+The follwing are cited in original proposal. Please note that these were not copied over without further consideration; in fact, these are probably the papers I have examined most carefully on the list. I have concerns about the relevence and/or recency of some of them. I am hoping to annotate this list with those concerns prior to Wednesday (Jan 17, 2018):
 
 R. Balasubramonian, J. Chang, T. Manning, J. H. Moreno, R. Murphy, R. Nair, and S. Swanson, “Near-data processing: Insights from a micro-46 workshop,” IEEE Micro, vol. 34, pp. 36–42, July 2014. 
 
@@ -57,4 +59,3 @@ M. Saxena, M. M. Swift, and Y. Zhang, “Flashtier: A lightweight, consistent an
 I. S. Choi and Y.-S. Kee, “Energy efficient scale-in clusters within-storage processing for big-data analytics,” in Proceedings of the 2015 International Symposium on Memory Systems, MEMSYS ’15, (New York, NY, USA), pp. 265–273, ACM, 2015. 
 
 H.-W. Tseng, Q. Zhao, Y. Zhou, M. Gahagan, and S. Swanson, “Morpheus: Creating application objects efficiently for heterogeneous computing,” in 43rd International Symposium on Computer Architecture, ISCA 2016, 2016. 
-
