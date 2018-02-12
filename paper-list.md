@@ -15,7 +15,7 @@ Essertel, Grégory M., et al. "Flare: Native compilation for heterogeneous workl
 
 Karpathiotakis, Manos, et al. "Just-in-time data virtualization: Lightweight data management with ViDa." Proceedings of the 7th Biennial Conference on Innovative Data Systems Research (CIDR). No. EPFL-CONF-203677. 2015.
 
-
+(could fit as both architecture and language) Riebler, Heinrich, et al. "Using just-in-time code generation for transparent resource management in heterogeneous systems." Research and Technologies for Society and Industry Leveraging a better tomorrow (RTSI), 2016 IEEE 2nd International Forum on. IEEE, 2016.
 
 ~
 
