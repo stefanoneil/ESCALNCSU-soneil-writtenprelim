@@ -3,6 +3,28 @@ For now this is more or less a straight dump of all the papers currently under c
 There are currently 23 papers listed here. Some of these are likely to be excluded from the eventual final draft.
 
 
+NEW LANGUAGE PAPERS:
+
+Fumero, Juan, et al. "Just-in-time GPU compilation for interpreted languages with partial evaluation." (2017).
+
+Lam, Siu Kwan, Antoine Pitrou, and Stanley Seibert. "Numba: A llvm-based python jit compiler." Proceedings of the Second Workshop on the LLVM Compiler Infrastructure in HPC. ACM, 2015.
+
+Redondo, Jose Manuel, and Francisco Ortin. "A comprehensive evaluation of common python implementations." IEEE Software 32.4 (2015): 76-84.
+
+Essertel, Grégory M., et al. "Flare: Native compilation for heterogeneous workloads in Apache Spark." arXiv preprint arXiv:1703.08219 (2017).
+
+Karpathiotakis, Manos, et al. "Just-in-time data virtualization: Lightweight data management with ViDa." Proceedings of the 7th Biennial Conference on Innovative Data Systems Research (CIDR). No. EPFL-CONF-203677. 2015.
+
+
+
+~
+
+
+
+~
+
+
+
 G. Koo, K. K. Matam, T. I, H. V. Krishna Giri Narra, J. Li, H.-W. Tseng, “Summarizer: Trading Communication with Computing Near Storage,” in Proceedings of the 50th Annual IEEE/ACM International Symposium on Microarchitecture, MICRO-50 ’17, (Cambridge, MA, USA), pp. 219–231, ACM, 2017.
 
 Boncheol Gu, Andre S. Yoon, Duck-Ho Bae, Insoon Jo, Jinyoung Lee, Jonghyun Yoon, Jeong-Uk Kang, Moonsang Kwon, Chanho Yoon, Sangyeun Cho, Jaeheon Jeong, and Duckhyun Chang. 2016. “Biscuit: a framework for near-data processing of big data workloads.” SIGARCH Comput. Archit. News 44, 3 (June 2016), 153-165.
