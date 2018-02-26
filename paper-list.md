@@ -5,7 +5,7 @@ There are currently 23 papers listed here. Some of these are likely to be exclud
 
 NEW LANGUAGE PAPERS:
 
-Fumero, Juan, et al. "Just-in-time GPU compilation for interpreted languages with partial evaluation." (2017).
+Fumero, Juan, et al. "Just-in-time GPU compilation for interpreted languages with partial evaluation,” in Proceedings of the 13th ACM SIGPLAN/SIGOPS International Conference on Virtual Execution Environments, VEE ’17, ACM, 2017.
 
 Lam, Siu Kwan, Antoine Pitrou, and Stanley Seibert. "Numba: A llvm-based python jit compiler." Proceedings of the Second Workshop on the LLVM Compiler Infrastructure in HPC. ACM, 2015.
 
