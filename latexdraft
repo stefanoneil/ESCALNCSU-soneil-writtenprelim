@@ -1,5 +1,3 @@
-Partial dump of LateX draft. I am re-writing and re-structuring some things, so I am saving a partial current version here in case I decide to use some of the text I am planning on deleting.
-
 %-----------------------------------------------------------------------------
 %
 %               Template for sigplanconf LaTeX Class
@@ -120,18 +118,33 @@ The remainder of this paper is broken down into the following sections:\\
 
 The proliferation of auxiliary processing units in modern computing systems has spurred a huge amount of research interest into the potential performance improvements such systems provide. These auxiliary processing units include a wide array of different technologies. The most common of these are graphical processing units (GPUs), field programmable gate arrays (FPGAs), and in-storage processors. Within each of these types of technologies, there is a great deal of variability in the specific properties a given device may have. Different GPUs, for example, employ a wide variety of different memory hierarchies. Furthermore, there are many other types of auxiliary processing units that a computing system may employ, apart from the common three listed above. Prominent examples include the tensor processing unit developed by Google, vision processing units, and physics processing units.
 
-
-
-
-
-
-\subsection{Near Data Processing}
-
 One intuitive way to exploit the performance advantages of heterogeneous computing systems is to apply these diverse computational resources to application code. Many auxiliary processing units are designed specifically to handle types of computations that are difficult for traditional CPUs to perform efficiently, such as graphics rendering or the training of neural networks. FPGAs can be configured to perform operations common to a particular application much faster than a traditional CPU is capable of.
 
 In addition to the speed advantage of specialized processors, a heterogeneous computing model can also improve application performance by moving the most data-intensive computations of an application closer to the data storage. In this way, auxiliary processing resources can act as a filter for data passing from the storage device to the main processor, reducing traffic across the main bus.
 
 Database applications, with their high volume of data access, are a prime candidate for acceleration by means of heterogeneous computing systems. Several projects have proposed using FPGAs to implement database operations (list of citations). In 2014, Woods et al. demonstrated that FPGAs could be used to implement not only basic tasks such as projection and selection-based filtering, but also more complex SQL operators such GROUP-BY and WHERE. Since then, various others have extended this approach with systems that move an even greater portion of database computations from the host processor down to FPGA pipelines. Ziener et al. demonstrate how far this approach can be taken in their paper, “FPGA-Based Dynamically Reconfigurable SQL Query Processing”, in which they describe and prototype a system in which a pipeline of FPGAs can be reconfigured to completely handle any query from a library of modules covering all major SQL operations.
+
+One complicating factor for sharing information between different components of a heterogeneous system is that of mapping between addresses in separate address spaces. Unifying the address space of heterogeneous components with that of the host memory could allow for more seamless data transfer. The project FlashTier uses this technique as part of an architecture for using a flash-based storage device as a cache for a higher capacity storage drive. For the sake of facilitating this design strategy, Olson et al. propose an interface for coherence messages between the host and auxiliary hardware accelerators called Crossing Guard.
+
+\subsection{In-storage Processing}
+
+Of particular relevance for our research is the use of processors built into storage devices as components of a heterogeneous system. All modern SSDs contain contain a built-in processor and accompanying DRAM memory cache. These are necessary for SSDs to transparently map logical block addresses from the host to physical locations within the flash memory, and to perform flash management algorithms such as wear leveling and garbage collection. These tasks are collectively known as the Flash Translation Layer (FTL).
+
+If made available to the host, SSD processor time and memory space not utilized for FTL can be applied to other tasks. The opportunity is especially great because of two advantages that these in-storage processors enjoy:
+
+1. lower power consumption than typical host processors
+
+2. lower latency and higher bandwidth accessing storage, without adding traffic to the main bus
+
+One very popular area of application for in-storage computing is big data analytics. Big data applications are heavily bottlenecked by storage bandwidth. Because in-storage processors can access this data before it reaches the main bus however, using in-storage processing to perform initial filtering of the data has the potential to greatly reduce traffic between the host and the storage device. Choi and Kee demonstrate the potential benefits of this storage-level data filtering using model analysis in "Energy Efficient Scale-In Clusters with In-Storage Processing for Big-Data Analytics". Aside from performance improvements, they also demonstrate the potential for reducing energy consumption. Their findings indicate that energy consumption is dominated by the cost of transferring data between storage and host, meaning that lowering this traffic is likely to deliver significant energy cost reduction in addition to performance improvement.
+
+Jun et al. implement a system called BlueDBM which introduces a number of optimizations for a distributed, big-data-oriented system built on SSDs. These optimizations include both in-storage processing, implemented with an FPGA at the storage device level, and a global address space for the distributed system. They are able to demonstrate meaningful performance gains by use of their in-storage processing engine.
+
+The Biscuit project focuses more exclusively on leveraging in-storage processing for application code. Specifically, Gu et al. develop a framework based on the flow-based programming model that supports C++ programming and another of other important features, such as multithreading and dynamic loading and unloading of tasks onto the SSD.
+
+
+
+
 
 (Next to discuss is Morpheus)
 
