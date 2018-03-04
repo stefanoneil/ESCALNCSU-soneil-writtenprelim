@@ -146,15 +146,11 @@ The primary drawback of the Morpheus project is its reliance on the programmer t
 
 \subsection{Host-SSD Interface and Communication}
 
-Because 
+The FTL is a layer of relatively complex logic and computation that exists, in essence, to allow SSDs to work with host requests optimized for hard disk drives. While this may have eased their introduction into a world dominated by HDDs, it seems reasonable to suppose that an interface designed with SSDs in mind would be likely to yield better results. This idea has motivated a number of researchers to develop and evaluate communication interfaces specifically designed to work with SSDs. In addition to having the potential to improve SSD performance, such an interface would also ease the computational burden imposed by the FTL, making in-storage resources even more available for other purposes.
 
+In “Application-Managed Flash”, Lee et al. implement a system called Application Managed Flash (AMF) which, as the name implies, moves the burden of flash management up to the host processor. They achieve this by means of a modified log-structured file system, a new I/O interface better suited to SSDs (for example, by disallowing overwrites), and a revised, greatly reduced FTL, which can run on either a device driver or directly on the SSD. Another project, called LightNVM, also defines a new I/O interface, and introduces a new Linux subsystem for managing open channel SSDs.
 
-\section{In-storage Processing}
-
-\subsection{Big Data Analytics}
-
-
-
+Key-value stores offer an alternative system for managing flash storage directly from the host. Both DIDACache and KAML manage impressive experimental results by implementing this key-value approach. The main distinguishing feature between these two approaches lies in KAML’s multi-log system, which provides stronger support for parallel access to different channels within the SSD. KAML also supports fine-grained locking and atomic updates of multiple key-value pairs at a time. DIDACache, on the other hand, uses a unified global namespace, and takes advantage of this with a host-SSD integrated garbage collector which works across the entire SSD.
 
 \section{Just-in-Time Compilation}
 
@@ -166,9 +162,12 @@ Leveraging the performance advantages of heterogeneous systems requires writing 
 
 Using JIT compilers to generate the appropriate code for the target heterogeneous processor instead can remove this burden from the programmer. The compatibility of JIT compilers with dynamic programming languages means that this approach can bring direct, native control of heterogeneous computing resources to such languages.
 
-\subsection{JIT Compiler Projects for Python}
+In “Just-In-Time GPU Compilation for Interpreted Languages with Partial Evaluation”, Fumero et al. modify a compiler and interpreter for the programming language R to automatically detect parallel operations, and JIT compile these operations into OpenCL code ready to run on a GPU.
 
-In its default implementation, Python is an interpreted language. The performance limitations of line-by-line interpretation have inspired a handful of high profile projects to re-implement the language with a JIT compiler.
+Trainiti et al. build a runtime system called the Orchestrator which manages workloads across a heterogeneous architecture called SAVEHSA which relies on JIT compilation to re-compile relevant code snippets for the hardware accelerator Orchestrator chooses to assign it to.
+
+Rubinsteyn et al. approach this problem for Python by implementing a library called Parakeet. This library is designed to speed up the widely-used Python scientific computing library Numpy. It does this by JIT compiling user-marked functions, and dividing their execution across the host and a GPU accelerator. Specifically, it looks for operations on Numpy arrays, which are highly parallelizable.
+
 
 \section{Detailed System Overview}
 
